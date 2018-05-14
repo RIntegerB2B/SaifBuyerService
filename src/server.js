@@ -3,6 +3,7 @@ var express = require('express'),
   port = process.env.PORT || 3000,
   bodyParser = require('body-parser');
 var cors = require('cors');
+var exec = require('child_process').exec;
 
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
@@ -27,6 +28,20 @@ mongoose.connection.once('open', function() {
 
 app.get('/test', function (req, res) {
   res.end( "Success" );
+})
+
+app.get('/deploy', function (req, res) {
+ 
+var yourscript = exec('sh ./home/ubuntu/myfolder/batchfile/deploy-buyer-app.sh',
+        (error, stdout, stderr) => {
+            console.log(`${stdout}`);
+            console.log(`${stderr}`);
+            if (error !== null) {
+                console.log(`exec error: ${error}`);
+            }
+        });
+  res.end( "Success" );
+  yourscript();
 })
 
 
