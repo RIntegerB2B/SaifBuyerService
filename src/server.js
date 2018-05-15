@@ -27,7 +27,7 @@ mongoose.connection.once('open', function () {
 })
 
 app.get('/test', function (req, res) {
-    res.end("Success");
+    res.end("Success!");
 })
 
 app.get('/deployApp', function (req, res) {
