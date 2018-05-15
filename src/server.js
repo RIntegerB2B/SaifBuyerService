@@ -32,7 +32,7 @@ app.get('/test', function (req, res) {
 
 app.get('/deploy', function (req, res) {
  
-var yourscript = exec('sh ./home/ubuntu/myfolder/batchfiles/deploy-buyer-app.sh',
+var yourscript = exec('sh /home/ubuntu/myfolder/batchfiles/deploy-buyer-app.sh',
         (error, stdout, stderr) => {
             console.log(`${stdout}`);
             console.log(`${stderr}`);
