@@ -30,40 +30,5 @@ app.get('/test', function (req, res) {
     res.end("Success!");
 })
 
-app.get('/deployApp', function (req, res) {
-
-     exec('sh /home/ubuntu/myfolder/batchfiles/deploy-buyer-app.sh',
-        (error, stdout, stderr) => {
-            console.log(`${stdout}`);
-            res.end(`${stdout}`);
-            console.log(`${stderr}`);
-            
-            if (error !== null) {
-                console.log(`exec error: ${error}`);
-                res.end(`exec error: ${error}`);
-            }
-        });
-
-    
-})
-
-app.get('/deployService', function (req, res) {
-
-     exec('sh /home/ubuntu/myfolder/batchfiles/deploy-buyer-service.sh',
-        (error, stdout, stderr) => {
-            console.log(`${stdout}`);
-
-            console.log(`${stderr}`);
-            res.end('Executed');
-            if (error !== null) {
-                console.log(`exec error: ${error}`);
-            }
-        });
-
-    
-})
-
-
-
-console.log('Buyer App started on: ' + port);
+console.log('Seller Service started on: ' + port);
 
