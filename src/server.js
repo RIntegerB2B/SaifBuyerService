@@ -1,13 +1,15 @@
 var express = require('express'),
     app = express(),
-    port = process.env.PORT || 3000,
+    port = process.env.PORT || 3001,
     bodyParser = require('body-parser');
 var cors = require('cors');
 var exec = require('child_process').exec;
+var routes=require('./route');
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(cors());
+routes.loadRoutes(app);
 app.listen(port);
 
 
