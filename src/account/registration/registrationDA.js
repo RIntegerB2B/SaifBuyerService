@@ -22,7 +22,8 @@ exports.create = function (req, res) {
                 var userAccount = new UserAccount();
                 userAccount.userId = userData._id.toString();
                 userAccount.userName = req.body.userName;
-                userAccount.password = req.body.password
+                userAccount.password = req.body.password;
+                userAccount.isActive = 1
                 userAccount.save(
                     function (err) {
                         if (err) { // if it contains error return 0

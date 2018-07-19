@@ -32,5 +32,5 @@ app.get('/test', function (req, res) {
     res.end("Success!");
 })
 
-console.log('Seller Service started on: ' + port);
+console.log('Buyer Service started on: ' + port);
 
