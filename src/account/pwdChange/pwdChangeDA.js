@@ -43,7 +43,7 @@ exports.pwdChangeRequest = function (req, res, someFormattedDate, randomKey) {
                                          });
                                      } else {
                                          res.status(200).send({
-                                             "result": "mail send"
+                                             "result": "1"
                                          });
                                      }
                                  });

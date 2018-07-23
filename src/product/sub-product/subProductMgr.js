@@ -1,10 +1,10 @@
-var subProductDA = require ('../sub-product/subProductDA');
+var subProductDA = require('../sub-product/subProductDA');
 
-exports.getProduct = function(req,res){
+exports.getProduct = function (req, res) {
     try {
-        subProductDA.getProduct(req,res)
+        subProductDA.getProduct(req, res)
     } catch (error) {
         console.log(error);
     }
-    
+
 }

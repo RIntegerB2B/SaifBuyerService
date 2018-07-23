@@ -1,4 +1,4 @@
-var catalogDA=require('./catalogDA')
+var catalogDA = require('./catalogDA')
 
 exports.findCatalog = function (req, res) {
     try {
@@ -6,5 +6,5 @@ exports.findCatalog = function (req, res) {
     } catch (error) {
         console.log(error);
     }
-    
+
 }

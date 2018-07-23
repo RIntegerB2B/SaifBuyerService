@@ -9,19 +9,13 @@ exports.findCatalog = function (req, res) {
                 "result": 0
             })
         } else {
-             var arraylength =createdCatalog.length-1;
-            for (var i= 0; i<=arraylength; i++)
-            {
+            var arraylength = createdCatalog.length - 1;
+            for (var i = 0; i <= arraylength; i++) {
 
-            createdCatalog[i].catalogImageName = appSetting.imageServerPath  + createdCatalog[i].catalogImageName;
-            
+                createdCatalog[i].catalogImageName = appSetting.imageServerPath + createdCatalog[i].catalogImageName;
+
             }
             res.status(200).json(createdCatalog);
-                      
-          
-
-
-       
         }
     })
 }

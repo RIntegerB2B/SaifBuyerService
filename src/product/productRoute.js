@@ -1,5 +1,5 @@
 var catalogMgr = require('../product/catalog/catalogMgr');
-var subProductMgr = require ( '../product/sub-product/subProductMgr')
+var subProductMgr = require('../product/sub-product/subProductMgr')
 
 module.exports = function (app) {
 

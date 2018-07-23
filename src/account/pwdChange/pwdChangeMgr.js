@@ -50,7 +50,7 @@ exports.pwdChangeRequest = function (req, res) {
       from: 'RIntegerNotification@gmail.com',
       to: emailId,
       subject: 'Password Change Notification',
-      text: 'Please use the link to reset your password http://http://ec2-13-126-16-163.ap-south-1.compute.amazonaws.com:81/PwdChangeReset/' + randomKey
+      text: 'Please use the link to reset your password http:http://localhost:4200/PwdChangeReset/' + randomKey
     };
   
     transporter.sendMail(mailOptions, function (error, info) {
