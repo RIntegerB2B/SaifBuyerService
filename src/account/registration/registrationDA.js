@@ -5,12 +5,11 @@ var UserAccount = require('../../model/userAccount.model');
 exports.create = function (req, res) {
     // Do the save operation here
     var registration = new User(req.body);
-    registration.firstName = req.body.firstName;
-    registration.lastName = req.body.lastName;
-    registration.userType = req.body.userType;
-    registration.emailId = req.body.emailId;
+    registration.name = req.body.name;
     registration.mobileNumber = req.body.mobileNumber;
-    registration.isApproved = 1; // TODO: This will be later controlled from Seller App
+    registration.location = req.body.location;
+    registration.userType = req.body.userType; 
+     // registration.isApproved = 1;TODO: This will be later controlled from Seller App
     
    registration.save(
         function (err, userData) {
@@ -21,9 +20,11 @@ exports.create = function (req, res) {
             } else {
                 var userAccount = new UserAccount();
                 userAccount.userId = userData._id.toString();
-                userAccount.userName = req.body.userName;
-                userAccount.password = req.body.password;
-                userAccount.isActive = 1
+                userAccount.name = req.body.name;
+                userAccount.mobileNumber = req.body.mobileNumber;
+                userAccount.location = req.body.location;
+                userAccount.userType = req.body.userType;
+         //         userAccount.isActive = 1
                 userAccount.save(
                     function (err) {
                         if (err) { // if it contains error return 0
