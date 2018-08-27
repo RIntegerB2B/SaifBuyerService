@@ -7,6 +7,8 @@ module.exports = function (app) {
         .get(catalogMgr.findCatalog);
 
     app.route('/catalog/:id/product')
-        .get(subProductMgr.getProduct);
+        .get(subProductMgr.getProducts);
 
+    app.route('/catalog/:id/product/:productId')
+        .get(subProductMgr.getProduct);
 }
