@@ -1,9 +1,6 @@
-var accountRoutes = require('./account/accountRoute');
-var categoryRoutes = require('./category/categoryRoute');
-var productRoutes = require('./product/productRoute');
+var settingRoutes = require('./settings/settingsRoute');
 
 exports.loadRoutes = function (app) {
-    accountRoutes(app);
-    categoryRoutes(app);
-    productRoutes(app);
+    settingRoutes(app);
 };
+
