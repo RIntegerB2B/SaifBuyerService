@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "arif-buyer-service",
+=======
+  "name": "buyer-service",
+>>>>>>> 24cbc973015796c16b72ff68b79f1159199a7fd4
   "version": "1.0.0",
   "description": "Buyer Service",
   "main": "./src/server.js",
@@ -7,7 +11,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
+<<<<<<< HEAD
   "author": "ArifBuyer",
+=======
+  "author": "RInteger",
+>>>>>>> 24cbc973015796c16b72ff68b79f1159199a7fd4
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",

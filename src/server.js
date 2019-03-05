@@ -1,6 +1,10 @@
 var express = require('express'),
     app = express(),
+<<<<<<< HEAD
     port = process.env.PORT || 3071, // port no
+=======
+    port = process.env.PORT || 3051, // port no
+>>>>>>> 24cbc973015796c16b72ff68b79f1159199a7fd4
     bodyParser = require('body-parser');
 var cors = require('cors');
 var exec = require('child_process').exec;
@@ -24,7 +28,11 @@ routes.loadRoutes(app);
 var httpServer = http.createServer(app);
 
 
+<<<<<<< HEAD
 httpServer.listen(port);
+=======
+httpServer.listen(3051);
+>>>>>>> 24cbc973015796c16b72ff68b79f1159199a7fd4
 
 
 
@@ -46,4 +54,8 @@ app.get('/test', function (req, res) {
     res.send("Success!");
 })
 
+<<<<<<< HEAD
 console.log('Arif Buyer Service started on: ' + port);
+=======
+console.log('Saif Buyer Service started on: ' + port);
+>>>>>>> 24cbc973015796c16b72ff68b79f1159199a7fd4
