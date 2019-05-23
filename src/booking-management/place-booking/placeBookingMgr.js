@@ -2,6 +2,7 @@ var placeBookingDA = require('./placeBookingDA');
 var Booking = require('../../model/booking.model');
 var zeroFill = require('zero-fill');
 
+
 exports.placeBooking = function (req, res) {
     try {
         var currentDate = new Date();
